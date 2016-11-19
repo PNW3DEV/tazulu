@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Tazulu</title>
+    </head>
+    <body>
+        <app></app>
+        <script src="https://cdn.jsdelivr.net/riot/2.6/riot+compiler.min.js"></script>
+        <script type="riot/tag" src="./app.html"></script>
+        <script type="riot/tag" src="./views/home.html"></script>
+        <script src="/js/routes.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyA1hW8MlktPlM3cyfPpvSGj7yAMvXHEppo",
+            authDomain: "tazulu-5270e.firebaseapp.com",
+            databaseURL: "https://tazulu-5270e.firebaseio.com",
+            storageBucket: "tazulu-5270e.appspot.com",
+            messagingSenderId: "405444477661"
+          };
+          firebase.initializeApp(config);
+        </script>
+        <script>
+            riot.compile(function() { var tags = riot.mount('app');riot.route.start(true); });
+        </script>
+    </body>
+</html>
