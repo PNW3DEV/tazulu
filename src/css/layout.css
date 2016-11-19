@@ -1,0 +1,93 @@
+/* APP DEFAULTS */
+body {
+	font-family:Roboto,Helvetica, Arial,sans-serif;
+	color: #444444;
+	background: #f7f5f2;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-touch-callout: none;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+/*
+	HEADINGS
+	Based On: https://www.w3.org/TR/CSS21/sample.html
+*/
+h1 { font-size: 2em; } 
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.17em; }
+h4 { font-size: 1.12em; }
+h5 { font-size: 0.83em; }
+h6 { font-size: 0.75em; }
+h1,h2,h3,h4,h5,h6
+{ font-family:Raleway,Helvetica,Arial,sans-serif;font-weight:900; }
+hr { margin:1em 0;border:none;border-bottom:1px solid rgba(0,0,0,0.1); }
+p { padding:1em 0 0 0; }
+/* CONTANIER STYLES */
+.all { height:100vh; width:100vw; }
+.example { padding:1em;background:#ffffff;overflow:hidden; }
+.no-overflow { overflow:hidden; }
+.scroll-1 { height:calc(100vh - 3.5em);overflow:auto; }
+.scroll-2 { height:calc(100vh - 7em);overflow:auto; }
+.scroll-3 { height:calc(100vh - 10.5em);overflow:auto; }
+.scroll-4 { height:calc(100vh - 14em);overflow:auto; }
+.scroll-horizontal { overflow-x:auto;overflow-y:hidden; }
+.scroll-vertical { overflow-x:hidden;overflow-y:auto; }
+.rounded { border-radius:.25em; }
+.shadow { box-shadow:0 5px 10px rgba(0,0,0,0.25); }
+.shadow-box { box-shadow:0 1px 3px rgba(0,0,0,0.15); }
+/* PADDING */
+.pad-dot-25 { padding:.25em; }
+.pad-dot-5 { padding:.5em; }
+.pad-dot-75 { padding:.75em; }
+.pad-1 { padding:1em; }
+.pad-2 { padding:2em; }
+.pad-3 { padding:3em; }
+/* RESPONSIVE PADDING */
+/* Dash between media query values */
+/* /.pad-1-2 = pad-1em@768px-2em@992px+ */
+/* /.pad-1-2-3 = pad-1em@768px-2em@992px-3em@1200px+ */
+.pad-1-2 { padding:1em; }
+/* HIDING */
+.hide { display:none; }
+/* TEXT ALIGNMENT */
+.ta-left { text-align:left; }
+.ta-right { text-align:right; }
+/* CONTAINERS */
+.container-1200 { max-width:1200px;margin:auto; }
+/* LAYOUT LEFT */
+.layout-left { }
+.layout-left-sidebar { flex:0 0 100%; }
+.layout-left-body { flex:1; }
+.layout-3-col-cell { flex:1 0 25em; }
+.layout-5-col-cell { flex:1 0 10em; }
+/* LAYOUT RIGHT */
+.layout-right { }
+.layout-right-sidebar { flex:0 0 100%; }
+.layout-right-body { flex:1; }
+.layout-3-col-cell { flex:1 0 25em; }
+.layout-5-col-cell { flex:1 0 10em; }
+/*
+	MEDIA QUERIES
+	Based On: http://getbootstrap.com/css/#grid-media-queries
+*/
+@media only screen and (min-width:768px) {
+	.block-mq-1 { display:block; }
+	.flex-mq-1 { display:-webkit-box;display:flex; }
+	.hide-mq-1 { display:none!important; }
+	.layout-left-sidebar { flex:1 0 30%; }
+	.layout-left-body { flex:1 0 70%; }
+	.layout-right-body { flex:1 0 70%; }
+	.layout-right-sidebar { flex:1 0 30%; }
+}
+@media only screen and (min-width:992px) {
+	.block-mq-2 { display:block; }
+	.flex-mq-2 { display:-webkit-box;display:flex; }
+	.pad-1-2 { padding:2em; }
+	.hide-mq-2 { display:none!important; }
+}
+@media only screen and (min-width:1200px) {
+	.block-mq-3 { display:block; }
+	.flex-mq-3 { display:-webkit-box;display:flex; }
+	.hide-mq-3 { display:none!important; }
+}

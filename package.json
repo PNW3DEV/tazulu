@@ -1,0 +1,21 @@
+{
+  "name": "pnw3dev-tazulu",
+  "version": "1.0.0",
+  "description": "Tazulu Web App",
+  "main": "server.js",
+  "scripts": {
+    "start": "node .server.js",
+    "monitor": "nodemon ./bin/www"
+  },
+  "keywords": [
+    "riotjs"
+  ],
+  "author": "Evosus, Inc",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "less": "^2.7.1",
+    "mdi": "^1.7.22",
+    "riot": "^2.6.5"
+  }
+}

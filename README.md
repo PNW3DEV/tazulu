@@ -1,2 +1,2 @@
-# tazulu
-Recommendation/Referral Web Application
+# Tazulu
+Social Web App
