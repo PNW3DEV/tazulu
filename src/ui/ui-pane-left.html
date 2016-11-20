@@ -1,15 +1,16 @@
-<ui-pane-left id="pane-left" class="pane-left ui-blue">
+<ui-pane-left id="pane-left" class="pane-left ui-red closed">
 	<div>
-		<ui-bar class="ui-blue-dk jc-between">
+		<ui-bar class="ui-red-dk jc-between">
 			<ui-bar-left>
-				<ui-btn-icon name="pane_left_close" mdicon="mdi mdi-close" css="ui-blue-dk" io="{ ui }" />
+				<ui-btn-icon name="pane_left_close" mdicon="mdi mdi-menu" css="ui-red" io="{ ui }" />
+				<ui-bar-app-name>Tazulu</ui-bar-app-name>
 			</ui-bar-left>
 			<ui-bar-right>
-				<ui-btn-icon if="{ isPinned }" class="hide block-mq-3" name="pane_left_pin" mdicon="mdi mdi-pin-off" css="ui-blue-dk" io="{ ui }" />
-				<ui-btn-icon if="{ !isPinned }" class="hide block-mq-3" name="pane_left_pin" mdicon="mdi mdi-pin" css="ui-blue-dk" io="{ ui }" />
+				<ui-btn-icon if="{ isPinned }" class="hide block-mq-3" name="pane_left_pin" mdicon="mdi mdi-pin-off" css="ui-red-dk" io="{ ui }" />
+				<ui-btn-icon if="{ !isPinned }" class="hide block-mq-3" name="pane_left_pin" mdicon="mdi mdi-pin" css="ui-red-dk" io="{ ui }" />
 			</ui-bar-right>
 		</ui-bar>
-		<div class="scroll-2 ui-blue">
+		<div class="scroll-2 ui-red">
 			<ul class="link-list">
 				<li class="f-row ai-center jc-between" each="{ guides }" onclick="{ listClick }">
 					<span class="f-row ai-center">
@@ -48,7 +49,7 @@
 			box-shadow:none!important;
 			position:static;
 			z-index:0;
-		}	
+		}
 	</style>
 	<script>
 		var self = this;
@@ -60,35 +61,36 @@
 		}
 		ui.on('pane_left_close:click',function() {
 			isPinned = false;panes.toggle('pane-left');
-		});	
-		ui.on('pane_left_pin:click',function() { 
+		});
+		ui.on('pane_left_pin:click',function() {
 			var pl = document.getElementById('pane-left');
 			if(isPinned) {
 				isPinned = false;
-				pl.style.position = 'absolute';	
+				pl.style.position = 'absolute';
 				pl.style.boxShadow = '5px 0px 5px rgba(0,0,0,0.5)';
 				//pl.classList.remove('pinned');
 			} else {
 				isPinned = true;
-				pl.style.position = 'relative';	
+				pl.style.position = 'relative';
 				pl.style.boxShadow = 'none';
 				//pl.classList.add('pinned');
 			}
 			self.update();
-		});	
+		});
 		guides = [
-			{ "name":"Home", "route":"/guide/contents","mdicon":"mdi mdi-home" },
-			{ "name":"Breakpoints", "route":"/guide/breakpoints","mdicon":"mdi mdi-cellphone-link" },
-			{ "name":"Buttons", "route":"/guide/buttons","mdicon":"mdi mdi-checkbox-multiple-blank" },
-			{ "name":"Charts", "route":"/guide/charts","mdicon":"mdi mdi-chart-pie" },
-			{ "name":"Flexbox", "route":"/guide/flexbox","mdicon":"mdi mdi-image-filter-center-focus" },
-			{ "name":"Fonts", "route":"/guide/fonts","mdicon":"mdi mdi-alphabetical" },
-			{ "name":"Form Elements", "route":"/guide/forms","mdicon":"mdi mdi-checkbox-multiple-marked" },
-			{ "name":"Grids", "route":"/guide/tables","mdicon":"mdi mdi-table-large" },
-			{ "name":"Layout Left", "route":"/guide/layout-left","mdicon":"mdi mdi-format-horizontal-align-left" },
-			{ "name":"Layout Right", "route":"/guide/layout-right","mdicon":"mdi mdi-format-horizontal-align-right" },
-			{ "name":"SVG Image Test", "route":"/guide/svg","mdicon":"mdi mdi-image" },
-			{ "name":"Theme", "route":"/guide/theme","mdicon":"mdi mdi-palette" }
+			{ "name":"Home", "route":"/home","mdicon":"mdi mdi-home" },
+			{ "name":"Add New Post", "route":"/post/edit","mdicon":"mdi mdi-plus" },
+			{ "name":"Books", "route":"/category/books","mdicon":"mdi mdi-book-open-variant" },
+			{ "name":"Business", "route":"/category/businuess","mdicon":"mdi mdi-domain" },
+			{ "name":"Fitness", "route":"/category/fitness","mdicon":"mdi mdi-run" },
+			{ "name":"Homegoods", "route":"/category/home-goods","mdicon":"mdi mdi-shopping" },
+			{ "name":"Movies", "route":"/category/movies","mdicon":"mdi mdi-movie" },
+			{ "name":"Music", "route":"/category/music","mdicon":"mdi mdi-music-circle" },
+			{ "name":"Technology", "route":"/category/technology","mdicon":"mdi mdi-laptop" },
+			{ "name":"Travel", "route":"/category/travel","mdicon":"mdi mdi-airplane" },
+			{ "name":"TV", "route":"/category/tv","mdicon":"mdi mdi-television" },
+			{ "name":"TODO List", "route":"/todo","mdicon":"mdi mdi-playlist-check" },
+			{ "name":"Sign Out", "route":"/login","mdicon":"mdi mdi-login" }
 		];
 	</script>
 </ui-pane-left>

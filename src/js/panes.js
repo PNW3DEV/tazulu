@@ -11,6 +11,7 @@ var panes = (function() {
 	}
 	var toggle = function(pid) {
 		var p = document.getElementById(pid);
+		document.getElementById('pane-left').classList.add('closed');
 		// Left Pane
 		if(pid == 'pane-left') {
 			if(left.isOpen) {

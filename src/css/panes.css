@@ -10,10 +10,11 @@
 	overflow: hidden;
 	flex: 1;
 	position: relative;
+	padding-left:3.5em;
 }
 .pane-left {
 	overflow: hidden;
-	width: 0;
+	width: 3.5em;
 	height: 100vh;
 	transform: translateZ(0);
 	transition: 0.15s linear width;
@@ -39,7 +40,7 @@
 		box-shadow: none;
 		position: absolute;
 		z-index: 300;
-		width: 0;
+		width: 3.5em;
 	}
 
 	.pane-right.open {
@@ -68,13 +69,13 @@
 		box-shadow: 5px 0px 5px rgba(0,0,0,0.5);
 		position: absolute;
 		z-index: 300;
-		width: 25em;
+		width: 15em;
 	}
 
 	.pane-left.closed {
 		position: absolute;
 		z-index: 300;
-		width: 0;
+		width: 3.5em;
 	}
 
 	.pane-right.open {
@@ -102,7 +103,7 @@
 	.pane-left.closed {
 		position: absolute;
 		z-index: 300;
-		width: 0;
+		width: 3.5em;
 	}
 
 	.pane-right.open {
@@ -130,7 +131,7 @@
 	.pane-left.closed {
 		position: absolute;
 		z-index: 300;
-		width: 0;
+		width: 3.5em;
 	}
 
 	.pane-right.open {

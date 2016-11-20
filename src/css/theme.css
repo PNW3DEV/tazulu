@@ -155,6 +155,29 @@ button.ui-teal.ui-btn:hover,
 .ui-teal.ui-select select
 { background:#40aca1;color:#ffffff; }
 
+/* Dark */
+.ui-dark,
+.ui-dark.ui-btn,
+button.ui-dark.ui-btn,
+button.ui-dark.ui-btn:hover,
+.ui-dark.ui-btn-icon,
+.ui-dark.ui-btn-icon:hover,
+.ui-dark.ui-input,
+.ui-dark.ui-select,
+.ui-dark.ui-select select
+{ background:#444;color:#ffffff; }
+
+/* Dark LIGHT */
+.ui-dark-lt,
+button.ui-dark-lt.ui-btn,
+button.ui-dark-lt.ui-btn:hover,
+.ui-dark-lt.ui-btn-icon,
+.ui-dark-lt.ui-btn-icon:hover,
+.ui-dark-lt.ui-input,
+.ui-dark-lt.ui-select,
+.ui-dark-lt.ui-select select
+{ background: #444; color:#fff; opacity: 0.8; }
+
 /* WHITE */
 .ui-white,
 .ui-white.ui-btn,
